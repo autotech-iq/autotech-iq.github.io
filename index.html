@@ -20,6 +20,7 @@
   --ease: cubic-bezier(.2,.8,.2,1);
 }
 *,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
 html{scroll-behavior:smooth;background:var(--navy)}
 body{background:var(--navy);color:var(--on-dark);font-family:var(--f-body);font-size:17px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--navy)}
@@ -316,6 +317,67 @@ p{margin:0}
 .logo-vis{display:grid;place-items:center}
 .logo-vis .hadir-logo{width:46%;height:auto;aspect-ratio:1;border-radius:23%;box-shadow:0 30px 70px -25px rgba(66,99,255,.8),0 0 0 1px rgba(255,255,255,.08);transition:transform .7s var(--ease)}
 .proj:hover .logo-vis .hadir-logo{transform:translateY(-6px) scale(1.04)}
+/* ---------- PHONE POLISH ---------- */
+@media (max-width:640px){
+  body{font-size:17px;line-height:1.65}
+  .section{padding-block:64px}
+  .divider{height:72px}
+  .sec-head{gap:14px;margin-bottom:32px}
+  .sec-head h2{font-size:31px;line-height:1.12}
+  .sec-head p{font-size:17px}
+  .eyebrow{font-size:12.5px;letter-spacing:.12em}
+  .hero{padding-top:118px;padding-bottom:56px}
+  .hero h1{font-size:40px;line-height:1.08}
+  .hero-sub{font-size:18px}
+  .hero-ctas{display:grid;grid-template-columns:1fr;gap:10px}
+  .hero-ctas .btn{justify-content:center;padding:16px 22px;font-size:17px}
+  .hero-tags li{font-size:13px;padding:7px 11px}
+  /* hero visual: one clean, flat panel */
+  .stage{aspect-ratio:auto;margin-top:8px}
+  .stage-inner{position:relative;inset:auto;transform:none!important}
+  .panel-main{position:relative;inset:auto;padding:18px}
+  .float,.orbit{display:none}
+  .pm-title{font-size:16px}
+  .slot{grid-template-columns:52px 1fr auto;padding:12px;font-size:15px}
+  .slot time{font-size:13px}
+  .pill{font-size:12px;padding:5px 9px}
+  /* cards */
+  .svc-in{padding:22px 20px 20px;gap:12px}
+  .svc h3{font-size:21px}
+  .svc p{font-size:16.5px}
+  .svc-more ul{font-size:16px}
+  .svc-link{font-size:16px}
+  .proj-body{padding:22px 20px 24px}
+  .proj-kind{font-size:12.5px;line-height:1.6}
+  .proj h3{font-size:24px}
+  .proj p{font-size:16.5px}
+  .feats li{font-size:14.5px;padding:7px 12px}
+  .about-statement{font-size:27px}
+  .about-copy{font-size:17px}
+  .principle{padding:18px}
+  .principle h3{font-size:18px}
+  .principle p{font-size:16px}
+  /* process: number beside text */
+  .steps{row-gap:28px}
+  .step{grid-template-columns:52px 1fr;column-gap:16px;row-gap:6px}
+  .step .step-num{grid-row:span 3;width:52px;height:52px}
+  .step h3{font-size:21px;align-self:center}
+  .step p{font-size:16.5px}
+  .step ul{font-size:15.5px}
+  /* contact */
+  .field input,.field select,.field textarea{font-size:17px}
+  .field label{font-size:16px}
+  .form-foot .btn{width:100%;justify-content:center;padding:16px 22px;font-size:17px}
+  .form-note{font-size:15px;max-width:none}
+  .channel{padding:16px;gap:12px}
+  .channel small{font-size:12px}
+  .channel strong{font-size:16.5px}
+  .hours p{font-size:16px}
+  /* footer */
+  .foot-grid h4{font-size:12.5px}
+  .foot-grid a{font-size:17px}
+  .foot-base{font-size:15px}
+}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
 }
